@@ -20,15 +20,15 @@
 
     --header-bg: var(--color4);
     --header-fg: var(--color1);
-    --body-bg: #34656D;
+    --body-bg: var(--color3);
     --bottons-bg: var(--color1);
-    --button-hover-bg: #34656D;
+    --button-hover-bg: hsl(from var(--color3) h s calc(l + 4));
     --hover-hover-fg: #ffffff;
     --main-bg: var(--color4);
     --main-fg: var(--color1);
     --product-bg: var(--color2);
     --product-fg: var(--color4);
-    --button-fg: #34656D;
+    --button-fg: var(--color3);
 }
 
 h1,
@@ -119,14 +119,27 @@ main section#main {
 #main article {
     color: var(--main-fg);
     background-color: var(--main-bg);
+    border: var(--color2) solid 5px;
     padding: 1rem;
     border-radius: 10px;
 }
 
+.produktu-mota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
 .produktuak {
     width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .produktua {
