@@ -23,7 +23,7 @@
     --body-bg: var(--color3);
     --bottons-bg: var(--color1);
     --button-hover-bg: hsl(from var(--color3) h s calc(l + 4));
-    --hover-hover-fg: #ffffff;
+    --hover-hover-fg: var(--color1);
     --main-bg: var(--color4);
     --main-fg: var(--color1);
     --product-bg: var(--color2);
@@ -116,10 +116,15 @@ main section#main {
     gap: 1rem;
 }
 
+article>*:not(:last-child) {
+    /* Azken elementua ez den elementuei*/
+    margin-bottom: 1.5rem;
+}
+
 #main article {
     color: var(--main-fg);
     background-color: var(--main-bg);
-    border: var(--color2) solid 5px;
+    box-shadow: var(--color4) 5px 5px 10px;
     padding: 1rem;
     border-radius: 10px;
 }
@@ -129,13 +134,15 @@ main section#main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+}
+
+.produktu-mota h3 {
+    border-bottom: var(--color1) solid 1px;
 }
 
 .produktuak {
     width: 100%;
     border-radius: 10px;
-    padding: 1rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
