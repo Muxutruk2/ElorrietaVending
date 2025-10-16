@@ -13,13 +13,35 @@
 }
 
 :root {
-    --header-bg: #434150;
+    /* Fondo Navbar: Gris Oscuro */
+    --header-bg: #1d1818;
+    /* Texto Header / Acento: Naranja */
+    --header-fg: #FF6600;
+    /* Fondo Principal: Azul Cobalto */
+    --body-bg: #004AAD;
+    /* Fondo Botones: Blanco */
+    --bottons-bg: #ffffff;
+    /* Color Hover / Acento: Naranja */
+    --hover-c: #FF6600;
+    /* Fondo Secciones: Blanco */
+    --main-c: #ffffff;
+    /* Fondo Tarjeta Producto: Gris Oscuro */
+    --product-c: #333333;
+
+    /* --- NUEVAS VARIABLES PARA MEJOR LEGIBILIDAD --- */
+    /* Color Texto Botón: Para el fondo blanco del botón */
+    --button-text-c: #004AAD;
+    /* Usamos el Azul Cobalto */
+    /* Color Texto Hover: Para el fondo naranja del hover */
+    --hover-text-c: #ffffff;
+    /* Usamos Blanco para alto contraste */
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--body-bg);
 }
 
 header {
@@ -27,7 +49,8 @@ header {
     display: flex;
     gap: 1.5rem;
     background-color: var(--header-bg);
-    color: white;
+    /* Color del texto del HEADER (título de empresa) es NARANJA */
+    color: var(--header-fg);
 }
 
 @media (width <=670px) {
@@ -59,7 +82,7 @@ header nav ul {
 }
 
 header nav ul li {
-    background-color: #9090A0;
+    background-color: var(--bottons-bg);
     border-radius: 10px;
     flex-grow: 1;
     height: 100%;
@@ -69,17 +92,31 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-    background-color: #535160;
+    /* El fondo cambia a NARANJA en hover */
+    background-color: var(--hover-c);
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    /*
+        ¡CORRECCIÓN CLAVE DE LEGIBILIDAD!
+        El botón es BLANCO (--bottons-bg), por lo que el texto NO puede ser blanco.
+        Usamos el Azul Cobalto (--button-text-c) para alto contraste.
+    */
+    color: var(--button-text-c);
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header nav ul li:hover a {
+    /* ¡CORRECCIÓN CLAVE DE LEGIBILIDAD!
+        Cuando el fondo es NARANJA (--hover-c), el texto DEBE ser BLANCO 
+        para el alto contraste.
+    */
+    color: var(--hover-text-c);
 }
 
 header nav ul li a:hover {
@@ -98,7 +135,7 @@ main section#main {
 }
 
 #main article {
-    background-color: #8B889D;
+    background-color: var(--main-c);
     padding: 1rem;
     border-radius: 10px;
 }
@@ -110,7 +147,10 @@ main section#main {
 }
 
 .produktua {
-    background-color: #434150;
+    background-color: var(--product-c);
+    /* ¡CORRECCIÓN CLAVE DE LEGIBILIDAD!
+        El fondo es Gris Oscuro (--product-c), por lo que el texto es CORRECTAMENTE BLANCO.
+    */
     color: white;
     max-width: 30vw;
     flex-grow: 1;
@@ -121,6 +161,7 @@ main section#main {
 
 .produktua-info {
     padding: 0.5rem;
+
 }
 
 .produktua img {
