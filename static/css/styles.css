@@ -8,8 +8,7 @@
     padding: 0;
     margin: 0;
 
-    /* Noto Sans*/
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -17,9 +16,9 @@
 
 :root {
     --color1: #FAF8F1;
-    --color2: #FAEAB1;
-    --color3: #34656D;
-    --color4: #334443;
+    --color2: #70d6f5;
+    --color3: #3391aa;
+    --color4: #0b2232;
 
     --header-bg: var(--color4);
     --header-fg: var(--color1);
@@ -42,6 +41,15 @@ h4 {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+}
+
+header img {
+    padding: 1rem;
+}
+
+header h1 {
+    padding: 2rem;
+    font-size: 2.5rem;
 }
 
 body {
@@ -77,22 +85,24 @@ header nav {
 }
 
 header nav ul {
+    justify-content: flex-end;
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     text-align: center;
     list-style: none;
-
+    gap: 3rem;
 }
 
 header nav ul li {
     background-color: var(--bottons-bg);
     height: 100%;
-    width: 100%;
+    flex-grow: 1;
     display: block;
     transition: all 200ms;
-    flex-grow: 1;
+    border-radius: 10px;
+
 }
 
 header nav ul li:hover {
@@ -191,4 +201,22 @@ article>*:not(:last-child) {
 footer {
     text-align: center;
     color: white;
+}
+
+.location {
+    display: flex;
+
+}
+
+.location div {
+    flex-grow: 1;
+}
+
+.location div ul {
+    font-size: 1.3rem;
+    padding-left: 2rem;
+}
+
+.location div ul li::marker {
+    content: "📍 ";
 }
