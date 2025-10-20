@@ -53,10 +53,11 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    padding-top: 1rem;
+
     text-align: center;
+    align-items: center;
     background-color: var(--header-bg);
     color: var(--header-fg);
 }
@@ -71,6 +72,10 @@ header {
     }
 }
 
+header nav {
+    width: 100%;
+}
+
 header nav ul {
     display: flex;
     width: 100%;
@@ -78,6 +83,7 @@ header nav ul {
     align-items: center;
     text-align: center;
     list-style: none;
+
 }
 
 header nav ul li {
@@ -86,6 +92,7 @@ header nav ul li {
     width: 100%;
     display: block;
     transition: all 200ms;
+    flex-grow: 1;
 }
 
 header nav ul li:hover {
