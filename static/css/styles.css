@@ -75,8 +75,20 @@ header {
         flex-direction: column;
     }
 
+    header {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
     header nav ul li {
-        padding: 1rem 0;
+        width: 100%;
+    }
+
+    header nav ul {
+        gap: 0.5rem !important;
     }
 }
 
@@ -139,7 +151,16 @@ main section#main {
     gap: 1rem;
 }
 
-article>*:not(:last-child) {
+.hero {
+    display: flex;
+
+}
+
+.hero div {
+    padding-right: 8rem;
+}
+
+#main article>*:not(:last-child) {
     /* Azken elementua ez den elementuei*/
     margin-bottom: 1.5rem;
 }
