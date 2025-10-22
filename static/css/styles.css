@@ -153,6 +153,7 @@ main {
 
 .hero {
     display: flex;
+    padding: 1rem 8rem;
 
 }
 
@@ -222,10 +223,12 @@ main article {
 footer {
     text-align: center;
     color: white;
+    margin-top: auto;
 }
 
 .location {
     display: flex;
+
 
 }
 
@@ -235,9 +238,26 @@ footer {
 
 .location div ul {
     font-size: 1.3rem;
-    padding-left: 2rem;
+    padding-left: 4rem;
+
 }
 
 .location div ul li::marker {
     content: "📍 ";
+}
+
+.flex-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+.produktua:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.produktua {
+    transform: translateY(0);
+    transition: transform 0.2s ease;
 }
