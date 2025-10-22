@@ -144,7 +144,7 @@ main {
     flex-grow: 1;
 }
 
-main section#main {
+main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -160,12 +160,12 @@ main section#main {
     padding-right: 8rem;
 }
 
-#main article>*:not(:last-child) {
-    /* Azken elementua ez den elementuei*/
+.block>*:not(:last-child) {
+    /* Margina ezarri seme guztieei azkena izan ezik */
     margin-bottom: 1.5rem;
 }
 
-#main article {
+main article {
     color: var(--main-fg);
     background-color: var(--main-bg);
     box-shadow: var(--color4) 5px 5px 10px;
