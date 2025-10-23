@@ -9,7 +9,6 @@
     margin: 0;
 
     font-family: "Roboto Mono", sans-serif;
-    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +23,7 @@
     --header-fg: var(--color1);
     --body-bg: var(--color3);
     --bottons-bg: var(--color1);
-    --button-hover-bg: hsl(from var(--color3) h s calc(l + 4));
+    --button-hover-bg: #3DA9C3;
     --hover-hover-fg: var(--color1);
     --main-bg: var(--color4);
     --main-fg: var(--color1);
@@ -38,7 +37,6 @@ h2,
 h3,
 h4 {
     font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
 }
