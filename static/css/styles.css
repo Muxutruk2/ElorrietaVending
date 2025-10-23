@@ -68,7 +68,7 @@ header {
     color: var(--header-fg);
 }
 
-@media (width <=670px) {
+@media (width <=770px) {
     header nav ul {
         flex-direction: column;
     }
@@ -88,6 +88,11 @@ header {
     header nav ul {
         gap: 0.5rem !important;
     }
+
+    .hero-div {
+        flex-direction: column;
+    }
+
 }
 
 header nav {
@@ -151,13 +156,23 @@ main {
 
 .hero {
     display: flex;
-    padding: 1rem 8rem;
+    justify-content: center;
+
+
 
 }
 
-.hero div {
-    padding-right: 8rem;
+.hero-div {
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
 }
+
+.hero-img {
+    display: row;
+
+}
+
 
 .block>*:not(:last-child) {
     /* Margina ezarri seme guztieei azkena izan ezik */
