@@ -102,6 +102,20 @@ body {
     header nav ul {
         gap: 0.5rem !important;
     }
+
+
+}
+
+@media (width <=850px) {
+    .produktuak {
+        grid-template-columns: auto auto auto !important;
+    }
+}
+
+@media (width <=600px) {
+    .produktuak {
+        grid-template-columns: auto !important;
+    }
 }
 
 header nav {
@@ -214,7 +228,8 @@ main article {
 .produktuak {
     width: 100%;
     border-radius: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
@@ -260,6 +275,7 @@ footer a {
 
 .location {
     display: flex;
+    max-width: 2000px;
 }
 
 .location div {
@@ -278,6 +294,7 @@ footer a {
 
 .location iframe {
     flex-grow: 1;
+    width: 100%;
 }
 
 
