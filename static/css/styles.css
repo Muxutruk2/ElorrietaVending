@@ -30,14 +30,14 @@
     --header-bg: var(--color4);
     --header-fg: var(--color1);
     --body-bg: var(--color3);
-    --bottons-bg: var(--color1);
+    --bottons-bg: var(--color4);
     --button-hover-bg: #3DA9C3;
+    --button-fg: var(--color1);
     --hover-hover-fg: var(--color1);
     --main-bg: var(--color4);
     --main-fg: var(--color1);
     --product-bg: var(--color2);
     --product-fg: var(--color4);
-    --button-fg: var(--color3);
 }
 
 h1,
@@ -52,6 +52,28 @@ h4 {
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
     font-style: normal;
+}
+
+h2 {
+    font-family: "Orbitron";
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: var(--color1);
+    border-radius: 10px;
+    color: var(--color4);
+}
+
+blockquote {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: "Orbitron";
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 15px var(--color1);
+    border-radius: 10px;
+    color: var(--color4);
 }
 
 header {
@@ -99,11 +121,13 @@ body {
         width: 100%;
     }
 
+    header nav ul li a {
+        padding: 1rem 1rem !important;
+    }
+
     header nav ul {
         gap: 0.5rem !important;
     }
-
-
 }
 
 @media (width <=850px) {
@@ -149,10 +173,11 @@ header nav ul li:hover {
 }
 
 header nav ul li a {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
     text-decoration: none;
     color: var(--button-fg);
     padding: 0.7rem 0;
-    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -185,7 +210,6 @@ main article {
     display: flex;
     flex-direction: column;
     max-width: 1600px;
-    gap: 1.5rem;
     color: var(--main-fg);
     background-color: var(--main-bg);
     box-shadow: var(--color4) 5px 5px 10px;
@@ -326,8 +350,4 @@ footer a {
     align-self: center;
     justify-content: center;
     align-items: center;
-}
-
-.guri-buruz img {
-    max-width: 700px;
 }
