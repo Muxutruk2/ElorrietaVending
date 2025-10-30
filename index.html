@@ -4,39 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clanker</title>
+    <meta name="keywords" content="Vending, AI, Janaria, Edaria">
+    <meta name="description"
+        content="Clanker S.L. makina saltzaileen enpresa bat da, makina adimenduetan espezializatua">
+    <meta name="robots" content="index, follow">
+    <title>Clanker Vending | Makina saltzaile adimenduak</title>
     <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/static/media/Fa.jpg">
+    <link rel="icon" type="image/x-icon" href="/static/media/favicon.jpg">
 </head>
 
 <body>
     <header>
-        <img src="/static/media/Logo.jpg" width="100" alt="Clanker Logo">
+        <img src="/static/media/Logo.png" width="100" alt="Clanker Logo">
         <h1>Clanker</h1>
         <nav>
             <ul>
-                <li><a href="/index.html">Orrialde Nagusia</a></li>
+                <li class="active"><a href="/index.html">Orrialde Nagusia</a></li>
                 <li><a href="/about.html">Guri Buruz</a></li>
                 <li><a href="/location.html">Salmenta Puntuak</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <article class="hero">
-            <div class="hero-div block">
-                <div class="block text">
-                    <h2>Ongi etorri Clanker webgunera!</h2>
-                    <p>
-                        Clanker naiz, makina saltzaileen zure lagun berria. Aztertu gure produktuen katalogoa eta
-                        ikusi zergatik garen aukerarik azkarrena eta dibertigarriena zure snack, edari eta produktu
-                        teknologikoentzako!
-                    </p>
-                </div>
-                <div class="hero-img">
-                    <img src="/static/media/Clanker.png" height="350" alt="Clanker">
-                    <img src="/static/media/Pack.png" height="350" alt="Janaria">
-                    <img src="/static/media/Makina.png" height="350" alt="Makina">
-                </div>
+        <article class="block">
+            <h2>Ongi etorri Clanker webgunera!</h2>
+            <p>
+                Clanker naiz, makina saltzaileen zure lagun berria. Aztertu gure produktuen katalogoa eta
+                ikusi zergatik garen aukerarik azkarrena eta dibertigarriena zure snack, edari eta produktu
+                teknologikoentzako!
+            </p>
+
+            <div class="hero-img">
+                <img src="/static/media/Clanker.png" alt="Clanker">
+                <img src="/static/media/Pack.png" alt="Janaria">
+                <img src="/static/media/Makina.png" alt="Makina">
+            </div>
             </div>
         </article>
         <article class="block">
@@ -49,7 +51,7 @@
                         <img src="/static/media/fritzkola.jpg" alt="Frizkola lata">
                         <div class="produktua-info">
                             <h4>FritzKola</h4>
-                            <h5>Edari errefresakante Alemaniarra.</h5>
+                            <p>Edari errefresakante Alemaniarra.</p>
                             <p>1.50€</p>
                         </div>
                     </div>
@@ -57,7 +59,7 @@
                         <img src="/static/media/Ura.jpg" alt="Ura">
                         <div class="produktua-info">
                             <h4>Aqua pura 50cl</h4>
-                            <h5>Ur freskoa eta garbia.</h5>
+                            <p>Ur freskoa eta garbia.</p>
                             <p>1.00€</p>
                         </div>
                     </div>
@@ -65,7 +67,7 @@
                         <img src="/static/media/Cafe.jpg" alt="Kafea">
                         <div class="produktua-info">
                             <h4>Kafe hotza</h4>
-                            <h5>Kafe izoztu goxoa,uneoro.</h5>
+                            <p>Kafe izoztu goxoa,uneoro.</p>
                             <p>0.80€</p>
                         </div>
                     </div>
@@ -73,7 +75,7 @@
                         <img src="/static/media/isotonico.jpg" alt="Edari Isonotica">
                         <div class="produktua-info">
                             <h4>Bebida Isotónica</h4>
-                            <h5>Hidratazioa eta energia, zapore biziarekin.</h5>
+                            <p>Hidratazioa eta energia, zapore biziarekin.</p>
                             <p>1.60€</p>
                         </div>
                     </div>
@@ -81,7 +83,7 @@
                         <img src="/static/media/te.jpg" alt="Te hotza">
                         <div class="produktua-info">
                             <h4>Te hotz errefreskantea</h4>
-                            <h5>Te hotz ezin hobea, egarria kentzeko.</h5>
+                            <p>Te hotz ezin hobea, egarria kentzeko.</p>
                             <p>1.60€</p>
                         </div>
                     </div>
@@ -89,7 +91,7 @@
                         <img src="/static/media/beer.jpg" alt="Garagardoa">
                         <div class="produktua-info">
                             <h4>Root Beer Garagardoa</h4>
-                            <h5>Root Beer klasikoa, betiko zaporea.</h5>
+                            <p>Root Beer klasikoa, betiko zaporea.</p>
                             <p>1.20€</p>
                         </div>
                     </div>
@@ -102,7 +104,7 @@
                         <img src="/static/media/patatak.jpg" alt="Patata Frijituak">
                         <div class="produktua-info">
                             <h4>Patata Frijituak</h4>
-                            <h5>Patata kurruskariak, zapore gazitua.</h5>
+                            <p>Patata kurruskariak, zapore gazitua.</p>
                             <p>1.20€</p>
                         </div>
                     </div>
@@ -110,7 +112,7 @@
                         <img src="/static/media/Galletas.jpg" alt="Gaileta gaziak">
                         <div class="produktua-info">
                             <h4>Gaileta gaziak</h4>
-                            <h5>Gaileta gazi ezin hobeak, edozein unetan.</h5>
+                            <p>Gaileta gazi ezin hobeak, edozein unetan.</p>
                             <p>0.80€</p>
                         </div>
                     </div>
@@ -118,7 +120,7 @@
                         <img src="/static/media/kinder.jpg" alt="Choco Wafer Txokolatina">
                         <div class="produktua-info">
                             <h4>Choco Wafer Txokolatina</h4>
-                            <h5>Txokolatezko wafer krematsuak.</h5>
+                            <p>Txokolatezko wafer krematsuak.</p>
                             <p>1.20€</p>
                         </div>
                     </div>
@@ -126,7 +128,7 @@
                         <img src="/static/media/negritos.jpg" alt="Negritos">
                         <div class="produktua-info">
                             <h4>Negritos</h4>
-                            <h5>Kakahueteak txokolatez estaliak, gozo-gozoak.</h5>
+                            <p>Kakahueteak txokolatez estaliak, gozo-gozoak.</p>
                             <p>0.80€</p>
                         </div>
                     </div>
@@ -134,7 +136,7 @@
                         <img src="/static/media/oreo.jpg" alt="Txokolatezko gailetak">
                         <div class="produktua-info">
                             <h4>Txokolatezko gailetak</h4>
-                            <h5>Txokolatesko gaileta klasikoak,betikoak.</h5>
+                            <p>Txokolatesko gaileta klasikoak,betikoak.</p>
                             <p>1.20€</p>
                         </div>
                     </div>
@@ -142,7 +144,7 @@
                         <img src="/static/media/Pringels.jpg" alt="Patata kurruskagarriak">
                         <div class="produktua-info">
                             <h4>Patata kurruskagarriak</h4>
-                            <h5>Patata kurruskarri eta forma gozoena.</h5>
+                            <p>Patata kurruskarri eta forma gozoena.</p>
                             <p>1.80€</p>
                         </div>
                     </div>
@@ -156,7 +158,7 @@
                         <img src="/static/media/Zukua.jpg" alt="Laranja Zukua">
                         <div class="produktua-info">
                             <h4>Laranja Zukua 20cl</h4>
-                            <h5>Laranja zuku naturala, freskagarria.</h5>
+                            <p>Laranja zuku naturala, freskagarria.</p>
                             <p>1.30€</p>
                         </div>
                     </div>
@@ -164,7 +166,7 @@
                         <img src="/static/media/Sagarra.jpg" alt="Sagarra">
                         <div class="produktua-info">
                             <h4>Sagarra</h4>
-                            <h5>Sagar freskoa,zapore gozoa</h5>
+                            <p>Sagar freskoa,zapore gozoa</p>
                             <p>0.60€</p>
                         </div>
                     </div>
@@ -172,7 +174,7 @@
                         <img src="/static/media/barritas.jpg" alt="Ezpeltazko barritak">
                         <div class="produktua-info">
                             <h4>Ezpeltazko barritak</h4>
-                            <h5>Barrita osasungarriak, indarra hartzeko.</h5>
+                            <p>Barrita osasungarriak, indarra hartzeko.</p>
                             <p>0.80€</p>
                         </div>
                     </div>
@@ -180,7 +182,7 @@
                         <img src="/static/media/brocoli.jpg" alt="Brokoli">
                         <div class="produktua-info">
                             <h4>Brokoli freskoa</h4>
-                            <h5>Brokoli sorta freskoa, berehala jateko.</h5>
+                            <p>Brokoli sorta freskoa, berehala jateko.</p>
                             <p>1.00€</p>
                         </div>
                     </div>
@@ -188,7 +190,7 @@
                         <img src="/static/media/lehorrak.jpg" alt="Fruitu-Lehorrak">
                         <div class="produktua-info">
                             <h4>Fruitu lehorrak</h4>
-                            <h5>Nahasketa energetikoa, txikia eta erosoa.</h5>
+                            <p>Nahasketa energetikoa, txikia eta erosoa.</p>
                             <p>0.60€</p>
                         </div>
                     </div>
@@ -196,7 +198,7 @@
                         <img src="/static/media/pepino.jpg" alt="Pepinoa">
                         <div class="produktua-info">
                             <h4>Pepinoa</h4>
-                            <h5>Pepino freskoa</h5>
+                            <p>Pepino freskoa</p>
                             <p>1.00€</p>
                         </div>
                     </div>
@@ -210,7 +212,7 @@
                         <img src="/static/media/Aurikular.jpg" alt="Aurikular Inalambrikoak">
                         <div class="produktua-info">
                             <h4>Aurikular Inalambrikoak</h4>
-                            <h5>Kable gabeko soinua, askatasuna.</h5>
+                            <p>Kable gabeko soinua, askatasuna.</p>
                             <p>15.00€</p>
                         </div>
                     </div>
@@ -218,7 +220,7 @@
                         <img src="/static/media/bateria.jpg" alt="Bateria Eramangarria">
                         <div class="produktua-info">
                             <h4>Bateria Eramangarria</h4>
-                            <h5>Energia gehigarria, edonora eramateko.</h5>
+                            <p>Energia gehigarria, edonora eramateko.</p>
                             <p>10.00€</p>
                         </div>
                     </div>
@@ -226,7 +228,7 @@
                         <img src="/static/media/cargador.jpg" alt="Kargadorea">
                         <div class="produktua-info">
                             <h4>Kargadorea</h4>
-                            <h5>Zure gailuak azkar kargatzeko.</h5>
+                            <p>Zure gailuak azkar kargatzeko.</p>
                             <p>12.50€</p>
                         </div>
                     </div>
@@ -234,7 +236,7 @@
                         <img src="/static/media/minijack.jpg" alt="Aurikular(Mini-Jack)">
                         <div class="produktua-info">
                             <h4>Aurikularrak (Mini-Jack)</h4>
-                            <h5>Mini-Jack konektorea, soinu argia.</h5>
+                            <p>Mini-Jack konektorea, soinu argia.</p>
                             <p>8.00€</p>
                         </div>
                     </div>
@@ -242,7 +244,7 @@
                         <img src="/static/media/Tipo-C-Aurikularrak.jpg" alt="Aurikularrak (USB-C)">
                         <div class="produktua-info">
                             <h4>Aurikularrak (USB-C)</h4>
-                            <h5>USB-C aurikularrak, gailu berrietarako.</h5>
+                            <p>USB-C aurikularrak, gailu berrietarako.</p>
                             <p>8.00€</p>
                         </div>
                     </div>
@@ -250,7 +252,7 @@
                         <img src="/static/media/Tipo-C-Kable.jpg" alt="TipocKable">
                         <div class="produktua-info">
                             <h4>USB-C Kablea</h4>
-                            <h5>USB-C kablea, datuak eta karga azkarra.</h5>
+                            <p>USB-C kablea, datuak eta karga azkarra.</p>
                             <p>5.00€</p>
                         </div>
                     </div>
@@ -259,13 +261,11 @@
         </article>
     </main>
     <footer>
-        <a href="https://creativecommons.org">Clanker</a> © 2012 by <a href="https://creativecommons.org">Clanker
-            S.L.</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA
-            4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+        <a href="https://example.com">Clanker</a> © 2012 by <a href="https://example.com">Clanker S.L</a> is licensed
+        under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
             style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
             src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
-            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt=""
             style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
             src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
             style="max-width: 1em;max-height:1em;margin-left: .2em;">

@@ -15,11 +15,15 @@
     margin: 0;
 
     font-family: "Work Sans", sans-serif;
-    font-weight: normal;
-    font-style: normal;
     font-size: 20px;
 }
 
+/* Klase hau erabiliko dugu, gure webgunean espaziatu zentzuduna ezartzeko. */
+/* Block barruan dauden seme-alaba zuzenak, azkena izan ezik, behan espazioa izango dute*/
+.block>*:not(:last-child) {
+    /* Margina ezarri seme guztieei azkena izan ezik */
+    margin-bottom: 1.5rem;
+}
 
 :root {
     --color1: #FAF8F1;
@@ -30,10 +34,12 @@
     --header-bg: var(--color4);
     --header-fg: var(--color1);
     --body-bg: var(--color3);
-    --bottons-bg: var(--color4);
+
+    --botton-bg: var(--color4);
     --button-hover-bg: #3DA9C3;
     --button-fg: var(--color1);
     --hover-hover-fg: var(--color1);
+
     --main-bg: var(--color4);
     --main-fg: var(--color1);
     --product-bg: var(--color2);
@@ -54,17 +60,9 @@ h4 {
     font-style: normal;
 }
 
-h2 {
-    font-family: "Orbitron";
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    background-color: var(--color1);
-    border-radius: 10px;
-    color: var(--color4);
-}
-
 blockquote {
     text-align: center;
+    width: 100%;
     padding: 0.5rem 0;
     font-family: "Orbitron";
     font-style: italic;
@@ -74,6 +72,13 @@ blockquote {
     box-shadow: 0px 0px 15px var(--color1);
     border-radius: 10px;
     color: var(--color4);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--body-bg);
 }
 
 header {
@@ -86,7 +91,7 @@ header {
     background-color: var(--header-bg);
     color: var(--header-fg);
 
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 
@@ -98,49 +103,6 @@ header h1 {
     font-size: 2.5rem;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--body-bg);
-}
-
-@media (width <=770px) {
-
-    header,
-    header nav ul,
-    header nav ul li,
-    article,
-    .flex-row,
-    .hero,
-    .hero-div {
-        flex-direction: column !important;
-    }
-
-    header nav ul li {
-        width: 100%;
-    }
-
-    header nav ul li a {
-        padding: 1rem 1rem !important;
-    }
-
-    header nav ul {
-        gap: 0.5rem !important;
-    }
-}
-
-@media (width <=850px) {
-    .produktuak {
-        grid-template-columns: auto auto auto !important;
-    }
-}
-
-@media (width <=600px) {
-    .produktuak {
-        grid-template-columns: auto !important;
-    }
-}
 
 header nav {
     height: 100%;
@@ -159,16 +121,17 @@ header nav ul {
 }
 
 header nav ul li {
-    background-color: var(--bottons-bg);
+    background-color: var(--botton-bg);
     height: 100%;
     flex-grow: 1;
     display: block;
     transition: all 200ms;
     border-radius: 10px;
-
+    border: 0.2rem solid var(--color1)
 }
 
-header nav ul li:hover {
+header nav ul li:hover,
+header nav ul li.active {
     background-color: var(--button-hover-bg);
 }
 
@@ -215,28 +178,41 @@ main article {
     box-shadow: var(--color4) 5px 5px 10px;
     padding: 1rem;
     border-radius: 10px;
+    text-align: left;
 }
 
-
-.hero-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+main article>* {
+    flex-grow: 1;
 }
+
+main article>img {
+    width: auto;
+    align-self: center;
+}
+
+main article>h2:first-child {
+    /* Artikulu barruan, lehengo h2-a*/
+    padding: 0.5rem 1rem;
+    background-color: var(--color1);
+    border-radius: 10px;
+    color: var(--color4);
+    text-align: center;
+}
+
 
 .hero-img {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
+.hero-img img {
+    max-width: 300px;
+    width: 30%;
+    height: auto;
+    object-fit: contain;
 
-.block>*:not(:last-child) {
-    /* Margina ezarri seme guztieei azkena izan ezik */
-    margin-bottom: 1.5rem;
 }
-
 
 .produktu-mota {
     display: flex;
@@ -302,17 +278,13 @@ footer a {
     max-width: 2000px;
 }
 
-.location div {
-    flex-grow: 1;
-}
-
-.location div ul {
+.location ul {
     font-size: 1.3rem;
     padding-left: 4rem;
 
 }
 
-.location div ul li::marker {
+.location ul li::marker {
     content: "📍 ";
 }
 
@@ -345,9 +317,51 @@ footer a {
     transition: transform 0.2s ease;
 }
 
-.guri-buruz article {
-    max-width: 1000px;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
+@media (width <=770px) {
+
+    header,
+    header nav ul,
+    header nav ul li,
+    article,
+    .flex-row,
+    .hero,
+    .hero-div {
+        flex-direction: column !important;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        padding: 1rem 1rem !important;
+    }
+
+    header nav ul {
+        gap: 0.5rem !important;
+    }
+
+}
+
+@media (width <=1350px) {
+    .produktuak {
+        grid-template-columns: auto auto auto !important;
+    }
+}
+
+@media (width <=850px) {
+    .produktuak {
+        grid-template-columns: auto auto !important;
+    }
+}
+
+@media (width <=650px) {
+    .produktuak {
+        grid-template-columns: auto !important;
+    }
+
+    .hero-img {
+        flex-direction: column;
+        align-items: center;
+    }
 }
