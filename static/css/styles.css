@@ -2,21 +2,24 @@
 /* Obitron */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset sinple bat */
 * {
     padding: 0;
     margin: 0;
 
+    /* Testua */
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
 }
 
 /* Klase hau erabiliko dugu, gure webgunean espaziatu zentzuduna ezartzeko. */
-/* Block barruan dauden seme-alaba zuzenak, azkena izan ezik, behan espazioa izango dute*/
+/* Block barruan dauden seme-alaba guztiak, azkena izan ezik, behan espazioa izango dute*/
 .block>*:not(:last-child) {
     /* Margina ezarri seme guztieei azkena izan ezik */
     margin-bottom: 1.5rem;
 }
 
+/* Kolore eskema ezarri bariableekin. Gero var(--color1) erabili daiteke */
 :root {
     --color1: #FAF8F1;
     --color2: #70d6f5;
@@ -38,17 +41,11 @@
     --product-fg: var(--color4);
 }
 
+/* Goiburuko titulua */
 h1 {
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
-}
-
-h3,
-h4 {
-    font-family: "Roboto Mono", monospace;
-    font-weight: bold;
-    font-style: normal;
 }
 
 blockquote {
@@ -57,18 +54,14 @@ blockquote {
     padding: 0.5rem 0;
     font-size: 1.5rem;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 400;
     background-color: var(--color1);
     box-shadow: 0px 0px 15px var(--color1);
     border-radius: 10px;
     color: var(--color4);
 }
 
-strong {
-    font-weight: bold;
-    font-style: italic;
-}
-
+/* Header > Main > Footer bata bestearen gainean (column) */
 body {
     display: flex;
     flex-direction: column;
@@ -76,6 +69,8 @@ body {
     background-color: var(--body-bg);
 }
 
+/* HEADER */
+/* Logo > Titulua > Navbar bata bestearen alboan (row) */
 header {
     display: flex;
     flex-direction: row;
@@ -97,7 +92,6 @@ header img {
 header h1 {
     font-size: 2.5rem;
 }
-
 
 header nav {
     height: 100%;
@@ -125,11 +119,6 @@ header nav ul li {
     border: 0.2rem solid var(--color1)
 }
 
-header nav ul li:hover,
-header nav ul li.active {
-    background-color: var(--button-hover-bg);
-}
-
 header nav ul li a {
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
@@ -142,14 +131,18 @@ header nav ul li a {
     justify-content: center;
 }
 
-header nav ul li:hover a {
-    color: var(--hover-hover-fg);
+/* Hover edo .active clasea badu */
+header nav ul li:hover,
+header nav ul li.active {
+    background-color: var(--button-hover-bg);
 }
 
 header nav ul li a:hover {
+    color: var(--hover-hover-fg);
     text-decoration: underline;
 }
 
+/* Hemen doa eduki gehiena */
 main {
     padding: 1rem;
     flex-grow: 1;
@@ -164,6 +157,7 @@ main img {
     height: auto;
 }
 
+/* Artikulu guztiak duten estilo lehenetsiak */
 main article {
     display: flex;
     flex-direction: column;
@@ -177,25 +171,13 @@ main article {
     text-align: left;
 }
 
-main article>* {
-    flex-grow: 1;
-}
-
-main article>img {
-    display: block;
-    width: 100%;
-    max-width: clamp(300px, 80%, 900px);
-    height: auto;
-    margin: auto;
-    border-radius: 8px;
-}
-
-main article>a {
+/* Artikuluetako link-ak */
+main article a {
     color: var(--main-fg);
 }
 
+/* Artikulu barruan, h2-ak eta lehenengo semea direnak */
 main article>h2:first-child {
-    /* Artikulu barruan, lehengo h2-a*/
     padding: 0.5rem 1rem;
     background-color: var(--color1);
     font-weight: 800;
@@ -205,7 +187,30 @@ main article>h2:first-child {
     text-align: center;
 }
 
+.guri-buruz article {
+    max-width: 1000px;
+}
 
+.location {
+    max-width: 700px;
+}
+
+.location ul {
+    font-size: 1.3rem;
+    padding-left: 4rem;
+
+}
+
+.location ul li::marker {
+    content: "📍 ";
+}
+
+.location iframe {
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Hiru argazkiak ondo agertzeko*/
 .hero-img {
     display: flex;
     width: 100%;
@@ -220,6 +225,21 @@ main article>h2:first-child {
 
 }
 
+/* PRODUKTUAK */
+/* <div class="produktu-mota">
+    <h3>{MOTA}</h3>
+    <div class="produktuak">
+        <div class="produktua">
+            <img src="{ARGAZKIA}" alt="{ALT}">
+            <div class="produktua-info">
+                <h4>{IZENA}</h4>
+                <p>{DESKRIBAPENA}</p>
+                <p>{PREZIOA}</p>
+            </div>
+        </div>
+        ...
+    </div>
+</div> */
 .produktu-mota {
     display: flex;
     flex-direction: column;
@@ -254,6 +274,16 @@ main article>h2:first-child {
     overflow: hidden;
 }
 
+.produktua:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.produktua {
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+}
+
 .produktua p:first-of-type {
     opacity: 0.5;
 }
@@ -272,6 +302,7 @@ main article>h2:first-child {
     border-top-right-radius: 10px;
 }
 
+/* Creative Commons Footer */
 footer {
     text-align: center;
     color: white;
@@ -282,52 +313,6 @@ footer {
 
 footer a {
     color: white;
-}
-
-.guri-buruz article {
-    max-width: 1000px;
-}
-
-.location {
-    max-width: 700px;
-}
-
-.location ul {
-    font-size: 1.3rem;
-    padding-left: 4rem;
-
-}
-
-.location ul li::marker {
-    content: "📍 ";
-}
-
-.location iframe {
-    flex-grow: 1;
-    width: 100%;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.grow {
-    flex-grow: 1;
-}
-
-.shrink {
-    flex-shrink: 1;
-}
-
-.produktua:hover {
-    opacity: 1;
-    transform: translateY(-10px);
-}
-
-.produktua {
-    transform: translateY(0);
-    transition: transform 0.2s ease;
 }
 
 @media (width <=770px) {
@@ -366,7 +351,6 @@ footer a {
     .produktuak {
         grid-template-columns: auto auto !important;
     }
-
 }
 
 @media (width <=650px) {
